@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/screens/cart/components/body.dart';
-import 'components/check_out_card.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

@@ -4,7 +4,8 @@ import 'package:shop_app/screens/splash/splash_screen.dart';
 import 'package:shop_app/theme.dart';
 import 'package:provider/provider.dart';
 import 'models/Cart.dart';
-import 'screens/checkout/checkoutscreen.dart';
+
+// import 'screens/checkout/checkoutscreen.dart';
 
 void main() {
   runApp(MyApp());

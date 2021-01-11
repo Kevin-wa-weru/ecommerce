@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shop_app/screens/checkout/checkoutscreen.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -33,11 +34,11 @@ class CheckoutCard extends StatelessWidget {
           )
         ],
       ),
-      child: buildSafeArea(),
+      child: buildSafeArea(context),
     );
   }
 
-  SafeArea buildSafeArea() {
+  SafeArea buildSafeArea(BuildContext context) {
     final CollectionReference _usersRef =
         FirebaseFirestore.instance.collection("Users");
     final CollectionReference _productsRef =
@@ -90,7 +91,8 @@ class CheckoutCard extends StatelessWidget {
                 width: getProportionateScreenWidth(190),
                 child: DefaultButton(
                   text: "Check Out",
-                  press: () {},
+                  press: () =>
+                      Navigator.pushNamed(context, CheckoutScreen.routeName),
                 ),
               ),
             ],
